@@ -8,6 +8,10 @@ function printResult(num:number):void{
     //return; // can thenreturn type :undefined;
 }
 
+function addAndHandle(n1:number, n2:number,cb:(a:number)=>void){
+    const result =n1+n2;
+    cb(result);
+}
 
 printResult(add(5,12));
 //let combinedValue: Function;
@@ -17,7 +21,7 @@ combinedValue = add;
 
 //combinedValue=5; // Error not assignable to Function
 
-
+addAndHandle(10,20, (n)=>console.log(n))
 console.log(combinedValue(8,8));
 
 /// let someValue:undefined;
