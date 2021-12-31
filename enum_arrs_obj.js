@@ -1,3 +1,4 @@
+"use strict";
 // const ADMIN = 0;
 // const READ_ONLY = 1;
 // const AUTHOR = 2;
@@ -12,17 +13,17 @@ var Role;
 //     name: string;
 //     age: number;
 // } =
-var person = {
+const person = {
     name: 'Ray',
     age: 50,
     hobbies: ['photography', 'music'],
     role: Role.ADMIN
 };
-var favoriteActivities;
+//let enumKey = Object.keys(Colors)[Object.values(Colors).indexOf("BLUE COLOR")];
+let favoriteActivities;
 favoriteActivities = ['art'];
 console.log(person.name);
-for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
-    var hobby = _a[_i];
+for (const hobby of person.hobbies) {
     console.log(hobby.toUpperCase());
     ///console.log(hobby.map());///!!!ERROR
 }
